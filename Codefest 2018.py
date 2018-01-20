@@ -17,9 +17,9 @@ while(count != 5):
     if(count == 1):
         data1 = datasetReader.loc[:,input()]
     if(count == 2):
-        data1 = datasetReader.loc[:,input()]
+        data2 = datasetReader.loc[:,input()]
     if(count == 3):
-        data1 = datasetReader.loc[:,input()]
+        data3 = datasetReader.loc[:,input()]
     if(count == 4):
         data4 = datasetReader.loc[:,input()]    
     count += 1
@@ -41,12 +41,15 @@ while(count != 4):
         start = start +1
     if(count == 1): 
         xArray1 = Array
-        #length = len(dataset2.loc[:,'dt'])
+        length = len(data2)
     elif(count == 2):
         xArray2 = Array
-    else:
+        length = len(data3)
+    elif(count == 3):
         xArray3 = Array
-        #length = len(dataset3.loc[:,'dt'])
+        length = len(data4)
+    else:
+        xArray4 = Array
     print(xArray1)
     count += 1
 d1y1 = dataset1.loc[:,'LandAverageTemperature']
