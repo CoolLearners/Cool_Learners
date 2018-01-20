@@ -12,7 +12,7 @@ import pandas as pd
 
 #datasetReader = []
 count = 1
-while(count != 4):
+while(count != 5):
     print("data ",count, "/n")
     print("name of dataset including the suffix (example: MyDataset.csv)")
     datasetReader = pd.read_csv(input())
@@ -34,8 +34,15 @@ xArray4 = []
 count = 1
 columnumbers = "d1y1" #not numbers names
 #power1 = 2 del
-length = len(data1)
 
+length = len(data1)
+xArray1 = range(1, length + 1)
+length = len(data2)
+xArray2 = range(1, length + 1)
+length = len(data3)
+xArray3 = range(1, length + 1)
+length = len(data4)
+xArray4 = range(1, length + 1)
 
 '''
 while(count != 5):
