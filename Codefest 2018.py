@@ -23,7 +23,7 @@ while(count != 5):
     if(count == 4):
         data4 = datasetReader.loc[:,input()]    
     count += 1
-
+power = input("degree for regression 1 to 4 ")
 xArray1 = []
 xArray2 = []
 xArray3 = []
@@ -52,25 +52,30 @@ while(count != 4):
         xArray4 = Array
     print(xArray1)
     count += 1
-d1y1 = dataset1.loc[:,'LandAverageTemperature']
-d1y2 = dataset1.loc[:,'LandMaxTemperature']
-d1y3 = dataset1.loc[:,'LandMinTemperature']
-d1y4 = dataset1.loc[:,'LandAndOceanAverageTemperature']
-slope_d1y1 = np.polyfit(xArray1,d1y1,power1)
-slope_d1y2 = np.polyfit(xArray1,d1y2,power1)
-slope_d1y3 = np.polyfit(xArray1,d1y3,power1)
-slope_d1y4 = np.polyfit(xArray1,d1y4,power1)
-print(slope_d1y1)
-print(slope_d1y2)
-print(slope_d1y3)
-print(slope_d1y4)
-numX = 0
-columns = []
+#d1y1 = dataset1.loc[:,'LandAverageTemperature']
+#d1y2 = dataset1.loc[:,'LandMaxTemperature']
+#d1y3 = dataset1.loc[:,'LandMinTemperature']
+#d1y4 = dataset1.loc[:,'LandAndOceanAverageTemperature']
+slope_data1 = np.polyfit(xArray1,data1,power1)
+slope_data2 = np.polyfit(xArray1,data2,power1)
+slope_data3 = np.polyfit(xArray1,data3,power1)
+slope_data4 = np.polyfit(xArray1,data4,power1)
+print(slope_data1)
+print(slope_data2)
+print(slope_data3)
+print(slope_data4)
+#numX = 0
+#columns = []
 count = 1
-arrayName = xArray1
-plotX = []
-a = 1
+#arrayName = xArray1
+#plotX = []
+#a = 1
 
+while(count != 5):
+    if()
+    mplp.plot()
+
+'''
 while(columnumbers != "end"):
     print("what are the colum numbers for graph ", count)
     columnumbers = str(input())
@@ -93,4 +98,4 @@ while(a != numX):
     plotX += arrayName
     a += 1
 mplp.plot(plotX, columns,"o")
-
+'''
