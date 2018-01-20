@@ -36,13 +36,17 @@ columnumbers = "d1y1" #not numbers names
 #power1 = 2 del
 
 length = len(data1)
-xArray1 = range(1, length + 1)
+for i in range(1, length + 1):
+    xArray1.append(i)
 length = len(data2)
-xArray2 = range(1, length + 1)
+for i in range(1, length + 1):
+    xArray2.append(i)
 length = len(data3)
-xArray3 = range(1, length + 1)
+for i in range(1, length + 1):
+    xArray3.append(i)
 length = len(data4)
-xArray4 = range(1, length + 1)
+for i in range(1, length + 1):
+    xArray4.append(i)
 
 '''
 while(count != 5):
@@ -101,10 +105,11 @@ while(count != 5):
     else:
         xForAll = xArray4
         yForAll = data4
-        slopeForAll = slope_data4
-    count += 1        
+        slopeForAll = slope_data4        
+    mplp.figure(count)
     mplp.plot(xForAll, yForAll, "o")
-    mplp.plot(xForAll, yForAll, "o")
+    mplp.plot(xForAll, slopeForAll, "r--")
+    count += 1
 
 '''
 while(columnumbers != "end"):
