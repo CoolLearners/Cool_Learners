@@ -3,15 +3,18 @@
 Created on Tue Jan  9 20:30:55 2018
 @author: Aditya Linngam, Rishik Reddy
 """
+
+
+#add dropdown with column names
 import numpy as np
 import matplotlib.pyplot as mplp
 import pandas as pd
 
 #datasetReader = []
 count = 1
-while(count != 5):
+while(count != 4):
     print("data ",count, "/n")
-    print("name of dataset including the suffix (example: My Dataset.csv)")
+    print("name of dataset including the suffix (example: MyDataset.csv)")
     datasetReader = pd.read_csv(input())
     print("name of column to read (example: AverageTempratures)")
     if(count == 1):
@@ -23,7 +26,7 @@ while(count != 5):
     if(count == 4):
         data4 = datasetReader.loc[:,input()]    
     count += 1
-power = input("degree for regression 1 to 4 ")
+power = int(input("degree for regression 1 to 4 "))
 xArray1 = []
 xArray2 = []
 xArray3 = []
@@ -32,7 +35,10 @@ count = 1
 columnumbers = "d1y1" #not numbers names
 #power1 = 2 del
 length = len(data1)
-while(count != 4):
+
+
+'''
+while(count != 5):
     start = 1
     Array = []
     print("the length of the dataset is equal to ", length)
@@ -52,6 +58,7 @@ while(count != 4):
         xArray4 = Array
     print(xArray1)
     count += 1
+    '''
 #d1y1 = dataset1.loc[:,'LandAverageTemperature']
 #d1y2 = dataset1.loc[:,'LandMaxTemperature']
 #d1y3 = dataset1.loc[:,'LandMinTemperature']
@@ -84,9 +91,13 @@ while(count != 5):
         xForAll = xArray3
         yForAll = data3
         slopeForAll = slope_data3
+    else:
+        xForAll = xArray4
+        yForAll = data4
+        slopeForAll = slope_data4
     count += 1        
     mplp.plot(xForAll, yForAll, "o")
-    mplp.plot(xForAll, slopeForAll, "b-")
+    mplp.plot(xForAll, yForAll, "o")
 
 '''
 while(columnumbers != "end"):
