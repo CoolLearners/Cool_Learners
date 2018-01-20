@@ -7,17 +7,32 @@ import numpy as np
 import matplotlib.pyplot as mplp
 import pandas as pd
 
-print("name of dataset including the suffix")
-dataset1 = pd.read_csv("Global Climate Change.csv")
+#datasetReader = []
+count = 1
+while(count != 5):
+    print("data ",count, "/n")
+    print("name of dataset including the suffix (example: MyDataset.csv)")
+    datasetReader = pd.read_csv(input())
+    print("name of column to read (example: AverageTempratures)")
+    if(count == 1):
+        data1 = datasetReader.loc[:,input()]
+    if(count == 2):
+        data1 = datasetReader.loc[:,input()]
+    if(count == 3):
+        data1 = datasetReader.loc[:,input()]
+    if(count == 4):
+        data4 = datasetReader.loc[:,input()]    
+    count += 1
 
 xArray1 = []
 xArray2 = []
 xArray3 = []
+xArray4 = []
 count = 1
 columnumbers = "d1y1" #not numbers names
 power1 = 2
-length = len(dataset1.loc[:,'dt'])
-while(count != 3):
+length = len(data1)
+while(count != 4):
     start = 1
     Array = []
     print("the length of the dataset is equal to ", length)
