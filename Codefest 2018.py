@@ -11,7 +11,7 @@ import pandas as pd
 count = 1
 while(count != 5):
     print("data ",count, "/n")
-    print("name of dataset including the suffix (example: MyDataset.csv)")
+    print("name of dataset including the suffix (example: My Dataset.csv)")
     datasetReader = pd.read_csv(input())
     print("name of column to read (example: AverageTempratures)")
     if(count == 1):
@@ -30,7 +30,7 @@ xArray3 = []
 xArray4 = []
 count = 1
 columnumbers = "d1y1" #not numbers names
-power1 = 2
+#power1 = 2 del
 length = len(data1)
 while(count != 4):
     start = 1
@@ -56,10 +56,10 @@ while(count != 4):
 #d1y2 = dataset1.loc[:,'LandMaxTemperature']
 #d1y3 = dataset1.loc[:,'LandMinTemperature']
 #d1y4 = dataset1.loc[:,'LandAndOceanAverageTemperature']
-slope_data1 = np.polyfit(xArray1,data1,power1)
-slope_data2 = np.polyfit(xArray1,data2,power1)
-slope_data3 = np.polyfit(xArray1,data3,power1)
-slope_data4 = np.polyfit(xArray1,data4,power1)
+slope_data1 = np.polyfit(xArray1,data1,power)
+slope_data2 = np.polyfit(xArray1,data2,power)
+slope_data3 = np.polyfit(xArray1,data3,power)
+slope_data4 = np.polyfit(xArray1,data4,power)
 print(slope_data1)
 print(slope_data2)
 print(slope_data3)
@@ -72,8 +72,21 @@ count = 1
 #a = 1
 
 while(count != 5):
-    if()
-    mplp.plot()
+    if(count == 1):
+        xForAll = xArray1
+        yForAll = data1
+        slopeForAll = slope_data1
+    elif(count == 2):
+        xForAll = xArray2
+        yForAll = data2
+        slopeForAll = slope_data2
+    elif(count == 3):
+        xForAll = xArray3
+        yForAll = data3
+        slopeForAll = slope_data3
+    count += 1        
+    mplp.plot(xForAll, yForAll, "o")
+    mplp.plot(xForAll, slopeForAll, "b-")
 
 '''
 while(columnumbers != "end"):
