@@ -108,7 +108,7 @@ while(count != 5):
         slopeForAll = slope_data4        
     mplp.figure(count)
     mplp.plot(xForAll, yForAll, "o")
-    mplp.plot(xForAll, slopeForAll, "r--")
+    mplp.plot(xForAll, np.polyval(slopeForAll, xForAll), "r--")
     count += 1
 
 '''
